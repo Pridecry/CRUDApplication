@@ -1,0 +1,64 @@
+﻿@model CRUDApplication.Models.User
+
+<h1 class="display-5 text-center mb-4">Create User</h1>
+
+<div class="jumbotron">
+    <form method="post" autocomplete="off">
+        <div class="form-group row">
+            <div class="col-2 text-right">
+                <label asp-for="Name" for="name" class="col-form-label"><b>Name</b></label>
+            </div>
+            <div class="col-10">
+                <input asp-for="Name" type="text" id="name" class="form-control" placeholder="Enter name">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2 text-right">
+                <label asp-for="Username" for="username" class="col-form-label"><b>Username</b></label>
+            </div>
+            <div class="col-10">
+                <input asp-for="Username" type="text" id="username" class="form-control" placeholder="Enter username">
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2 text-right">
+                <label asp-for="Email" for="email" class="col-form-label"><b>Email</b></label>
+            </div>
+            <div class="col-10">
+                <input asp-for="Email" type="text" id="email" class="form-control" placeholder="Enter email">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2 text-right">
+                <label asp-for="Phone" for="phone" class="col-form-label"><b>Phone</b></label>
+            </div>
+            <div class="col-10">
+                <input asp-for="Phone" type="text" id="phone" class="form-control" placeholder="Enter phone number">
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2 text-right">
+                <label asp-for="Website" for="website" class="col-form-label"><b>Website</b></label>
+            </div>
+            <div class="col-10">
+                <input asp-for="Website" type="text" id="website" class="form-control" placeholder="Enter website address">
+                <span asp-validation-for="Website" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-auto offset-2 mt-2">
+                <button type="submit" class="mdc-button mdc-button--raised">
+                    <span class="mdc-button__label">Create</span>
+                </button>
+                <a class="mdc-button mdc-button--raised ml-3" asp-controller="User" asp-action="Index">
+                    <span class="mdc-button__label">Back to list</span>
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
